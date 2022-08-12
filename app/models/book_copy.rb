@@ -13,4 +13,18 @@ class BookCopy < ApplicationRecord
   EBOOK = 3
 
   enumerize :ingenuity, in: { hardback: HARDBACK, paperback: PAPERBACK, ebook: EBOOK }
+
+  def borrow(borrower)
+    return false if user.present?
+
+    self.user = borrower
+    save
+  end
+
+  def return_book(borrower)
+    return false unless user.present?
+
+    self.user = nil
+    save
+  end
 end

@@ -83,6 +83,8 @@ GEM
       activesupport (>= 3.2)
     erubi (1.11.0)
     erubis (2.7.0)
+    faker (2.22.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -131,8 +133,12 @@ GEM
       slop (~> 3.0)
     puma (5.6.4)
       nio4r (~> 2.0)
+    pundit (2.2.0)
+      activesupport (>= 3.0.0)
     racc (1.6.0)
     rack (2.2.4)
+    rack-attack (6.6.1)
+      rack (>= 1.0, < 3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-test (2.0.2)
@@ -241,12 +247,15 @@ DEPENDENCIES
   brakeman
   byebug
   enumerize
+  faker
   haml_lint
   listen (~> 3.3)
   mysql2 (~> 0.5)
   pry-rails
   pry-remote
   puma (~> 5.0)
+  pundit
+  rack-attack
   rack-cors
   rails (~> 6.1.6, >= 6.1.6.1)
   rails-erd
