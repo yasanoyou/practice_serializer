@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BookCopyPolicy < ApplicationPolicy
   class Scope
     attr_reader :user_context, :scope, :user, :admin

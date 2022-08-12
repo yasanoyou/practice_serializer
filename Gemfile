@@ -9,8 +9,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'enumerize'
 gem 'mysql2', '~> 0.5'
 gem 'puma', '~> 5.0'
-gem 'rack-cors'
 gem 'pundit'
+gem 'rack-cors'
 gem 'rails', '~> 6.1.6', '>= 6.1.6.1'
 
 group :development, :test do
@@ -20,12 +20,12 @@ group :development, :test do
   gem 'haml_lint', require: false
   gem 'pry-rails'
   gem 'pry-remote'
+  gem 'rack-attack'
   gem 'rails_best_practices', require: false
   gem 'rails-erd'
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
   gem 'scss_lint', require: false
-  gem 'rack-attack'
 end
 
 group :development do

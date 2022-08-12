@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Contexts
   class UserContext
     attr_reader :user, :admin

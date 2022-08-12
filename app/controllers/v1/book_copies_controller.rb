@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module V1
   class BookCopiesController < ApplicationController
-    skip_before_action :authenticate_admin, only: [:return_book, :borrow]
-    before_action :authenticate, only: [:return_book, :borrow]
-    before_action :current_user_presence, only: [:return_book, :borrow]
-    before_action :set_book_copy, only: [:show, :destroy, :update, :borrow, :return_book]
+    skip_before_action :authenticate_admin, only: %i[return_book borrow]
+    before_action :authenticate, only: %i[return_book borrow]
+    before_action :current_user_presence, only: %i[return_book borrow]
+    before_action :set_book_copy, only: %i[show destroy update borrow return_book]
 
     def index
       book_copies = BookCopy.preload(:book, :user, book: [:author]).paginate(page: params[:page])
